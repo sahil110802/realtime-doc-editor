@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 
-import Logo from '../../public/cypresslogo.svg';
-import Diamond from '../../public/icons/diamond.svg';
+import Logo from '../../../public/cypresslogo.svg';
+import Diamond from '../../../public/icons/diamond.svg';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -79,7 +79,7 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 const Header = () => {
-  const [path, setPath] = useState<string>('#products');
+  const [path, setPath] = useState('#products');
   return (
     <header className="p-4 flex justify-between items-center">
       <Link
@@ -245,7 +245,7 @@ const Header = () => {
             Sign Up
           </Button>
         </Link>
-        <ModeToggle></ModeToggle>
+        {/* <ModeToggle></ModeToggle> */}
       </aside>
     </header>
   );
