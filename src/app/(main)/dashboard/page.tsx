@@ -30,7 +30,7 @@ const Dashboard = async () => {
     await getUserSubscriptionStatus(user.id);
 
   // If there is an error in fetching the subscription status, exit the component
-  if (subscriptionError) return;
+  // if (subscriptionError) return;
 
   // If the user doesn't have a workspace, render the DashboardSetup component
   if (!workspace)
