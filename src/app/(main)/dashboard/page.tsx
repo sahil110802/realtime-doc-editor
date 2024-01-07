@@ -6,7 +6,7 @@ import { cookies } from 'next/headers';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { redirect } from 'next/navigation';
 import { getUserSubscriptionStatus } from '@/lib/supabase/queries';
-import DashboardSetup from '@/components/dashboard-setup/dashboard-setup';
+import {DashboardSetup} from '@/components/dashboard-setup/dashboard-setup';
 
 const Dashboard = async () => {
   // Initialize a Supabase client using server-side cookies
