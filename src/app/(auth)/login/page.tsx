@@ -23,8 +23,8 @@ import Google from '../../../../public/google.png';
 import { Separator } from '@/components/ui/separator';
 import { FormSchema } from '@/lib/types';
 import { useRouter } from 'next/navigation';
-import Loader from '@/components/global/loader';
-import { actionLoginUser } from '@/lib/server-action/auth-actions';
+import Loader from '@/components/loader';
+import { actionLoginUser } from '@/lib/server-action/server-actions';
 
 // Define the main functional component for Login
 export default function Login() {
@@ -64,7 +64,7 @@ export default function Login() {
         onChange={() => {
           if (submitError) setSubmitError('');
         }}
-        onSubmit={form.handleSubmit(onSubmit)}
+        // onSubmit={form.handleSubmit(onSubmit)}
         className="w-full sm:justify-center sm:w-[400px] space-y-6 flex flex-col"
       >
         <Link
@@ -120,16 +120,13 @@ export default function Login() {
         />
 
         {submitError && <FormMessage>{submitError}</FormMessage>}
-        
         <Button
           type="submit"
           className="w-full p-6"
           size="lg"
           disabled={isLoading}
-          
         >
           {!isLoading ? 'Login' : <Loader />}
-          
         </Button>
         <span className="self-center">
           Dont have an account?{' '}
@@ -139,13 +136,15 @@ export default function Login() {
           >
             Sign Up
           </Link>
-        </span> 
+        </span>
         <Separator></Separator>
         <Button
           type="button"
           className="w-full relative"
           size="lg"
           variant="outline"
+          icon={Google}
+          logoStyles=""
         >
           Login with Google
         </Button>
