@@ -546,7 +546,7 @@ const appReducer = (
       };
 
     default:
-      return state;
+      return initialState;
   }
 };
 
@@ -562,7 +562,7 @@ const AppStateContext = createContext<
 >(undefined);
 
 interface AppStateProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const AppStateProvider: FC<AppStateProviderProps> = ({ children }) => {
