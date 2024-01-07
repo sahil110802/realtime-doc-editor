@@ -31,7 +31,7 @@ type Action =
         workspaces: [...state.workspaces, action.payload],
       };
     default:
-      return initialState
+      return state;
   }
 }
 
